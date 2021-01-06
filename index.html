@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css"
+        integrity="sha512-ZRv40llEogRmoWgZwnsqke3HNzJ0kiI0+pcMgiz2bxO6Ew1DVBtWjVn0qjrXdT3+u+pSN36gLgmJiiQ3cQtyzA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Aprendiendo ajax</title>
+</head>
+<body>
+    <section class="container">
+        <section class="columns my-4">  
+            <div class="column">
+                <h2 class="title is-2 has-text-centered">Tabla de usuarios</h2>
+            </div>
+            <div class="column has-text-centered">
+                <a href="#" id="getUsers" class="button is-info">Traer Usuarios</a>
+            </div>
+        </section>
+        <section>
+           <form id="addUserForm">
+                <div class="columns mb-0">
+                    <div class="field column">
+                        <div class="control">
+                            <input type="text" class="input" name="name" id="name" placeholder="Nombre" >
+                        </div>
+                    </div>
+                    <div class="field column">
+                        <div class="control">
+                            <input type="text" name="userName" id="userName" placeholder="Nombre de usuario" class="input" >
+                        </div>
+                    </div>
+                    <div class="field column">
+                        <div class="control">
+                            <input type="text" name="email" id="email" placeholder="Correo electrónico" class="input" >
+                        </div>
+                    </div>
+                </div>
+                <div class="field has-text-centered">
+                    <input type="submit" value="Agregar" class="button is-link">
+                </div>
+           </form>
+        </section>
+        <section class="my-4 table-section">
+            <table class="table is-hoverable is-fullwidth">
+                <thead class="has-background-warning">
+                    <tr>
+                        <th class="has-text-centered">ID</th>
+                        <th class="has-text-centered">Nombre</th>
+                        <th class="has-text-centered">Usuario</th>
+                        <th class="has-text-centered">Correo</th>
+                        <th class="has-text-centered">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody id="userTable">
+                   
+                </tbody>
+            </table>
+        </section>
+        <div class="is-flex is-justify-content-center">
+            <div id="loader"></div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
