@@ -93,7 +93,7 @@ document.querySelector('#getUsers').addEventListener('click',()=>{
 
     req.onload =()=>
     {
-       // table.innerHTML='';
+        table.innerHTML='';
         addToRow(JSON.parse(req.responseText));
         UI.showMessage('Nuevos usuarios agregados.', 'has-background-link has-text-white');
     }
